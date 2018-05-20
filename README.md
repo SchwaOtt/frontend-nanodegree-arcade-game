@@ -1,6 +1,35 @@
-frontend-nanodegree-arcade-game
-===============================
+#Classic Arcade Game Project
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+##Table of Contents
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+- [Classic Arcade Game Project](#classic-arcade-game-project)
+	- [Table of Contents](#table-of-contents)
+		- [What is the Classic Adcade Game](#what-is-the-classic-adcade-game)
+		- [How to Player](#how-to-player)
+		- [Gameplay](#gameplay)
+		- [Challenge](#challenge)
+		- [Required dependencies](#required-dependencies)
+
+<!-- /TOC -->
+###What is the Classic Adcade Game
+
+It is an easy game where you can test your reflexes.
+
+###How to Player
+
+You can reach the game here: https://schwaott.github.io/frontend-nanodegree-arcade-game/
+
+![image](images/crop_1.jpg) ![image](images/crop_2.jpg)
+
+###Gameplay
+
+Choose you character for starting game. You can move for the 4 main direction (up, down and right, left) within the game field. When you have reached the water you earn score.
+
+###Challenge
+
+Try to reach the water without colliding with bugs.
+
+###Required dependencies
+
+Use the latest version of your browser.
