@@ -6,7 +6,36 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- Counter for winning. -->
+  <div class="score-counter">
+    Score: 0
+  </div>
+
+<!-- Modal for Player selection-->
+  <div class="modal">
+
+<!-- Modal content -->
+    <div class="modal-content">
+
+      <span class="close">x</span>
+      <h1>Please, select your Player!</h1>
+
+      <div class="players">
+
+<!-- Image loads. -->
+        <img id="0" src="images/char-boy.png" alt="Boy">
+        <img id="1" src="images/char-cat-girl.png" alt="CatGirl">
+        <img id="2" src="images/char-horn-girl.png" alt="HornGirl">
+        <img id="3" src="images/char-pink-girl.png" alt="PinkGirl">
+        <img id="4" src="images/char-princess-girl.png" alt="Princess">
+
+      </div>
+    </div>
+  </div>
+
     <script src="js/resources.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/app.js"></script>
     <script src="js/engine.js"></script>
 </body>

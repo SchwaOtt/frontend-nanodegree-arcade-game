@@ -31,7 +31,9 @@ Enemy.prototype.update = function(dt) {
     if (this.x > 505) {
 
       this.x = 0;
-      this.step = 200 + Math.floor(Math.random() * 1024);
+
+//Step between 200 and 1024.
+      this.step = Math.floor(Math.random() * (1024 - 200)) + 200;
 
     };
 };
@@ -48,15 +50,18 @@ const Player = function(x, y) {
 
     this.x = x;
     this.y = y;
-    this.sprite = 'images/char-boy.png';
+    this.players = ['boy', 'cat-girl', 'horn-girl', 'pink-girl', 'princess-girl'];
 
 };
 
+//Update player position.
 Player.prototype.update = function() {
 
 //If reach water...
     if (this.y < -14) {
         this.y = 400;
+        this.score += 1;
+        document.querySelector('.score-counter').textContent = 'Score: ' + this.score;
     }
 
 //Player move within the game field.
@@ -73,11 +78,16 @@ Player.prototype.update = function() {
     }
 };
 
+// Draw the player on the screen, required method for game
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+//Player position change by KeyPress.
 Player.prototype.handleInput = function(key) {
+
+//Move or not move. :)
+  if (this.enabled) {
 
     switch (key) {
         case 'left':
@@ -93,7 +103,24 @@ Player.prototype.handleInput = function(key) {
           this.y += 83;
           break;
     }
+  }
 };
+
+//Default character for Player.
+Player.prototype.sprite = ['images/char-boy.png'];
+
+//Character setting method.
+Player.prototype.newPlayer = function (pic) {
+
+  this.sprite.splice(0, 1, pic);
+
+};
+
+//Initial score counter.
+Player.prototype.score = 0;
+
+//Player can/can't move
+Player.prototype.enabled = false;
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
@@ -104,7 +131,8 @@ const enemyY = [68, 151, 234];
 
 enemyY.forEach(function(y) {
 
-  allEnemies.push(new Enemy(0, y, 200 + Math.floor(Math.random() * 1024)));
+//Step between 200 and 1024.
+  allEnemies.push(new Enemy(0, y, Math.floor(Math.random() * (1024 - 200)) + 200));
 
 });
 
