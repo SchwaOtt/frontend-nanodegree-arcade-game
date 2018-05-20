@@ -25,11 +25,11 @@ You can reach the game here: https://schwaott.github.io/frontend-nanodegree-arca
 
 ### Gameplay
 
-Choose you character for starting game. You can move for the 4 main direction (up, down and right, left) within the game field. When you have reached the water you earn score.
+Choose you character for starting game. You can move for the 4 main direction with arrow keys (up, down and right, left) within the game field. When you have reached the water you earn score.
 
 ### Challenge
 
-Try to reach the water without colliding with bugs.
+Try to reach the water without colliding with bugs. If colliding you will be returned to the starting point.
 
 ### Required dependencies
 
